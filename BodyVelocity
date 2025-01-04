@@ -1,0 +1,3 @@
+local bv = Instance.new("BodyVelocity", part)
+bv.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+bv.Velocity = (part1.Position - part.Position).Unit * 20
