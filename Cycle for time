@@ -1,0 +1,5 @@
+local runTime = time
+local startTime = os.clock()
+    while os.clock() - startTime < runTime and wait() do
+        print("baba")
+    end
