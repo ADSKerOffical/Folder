@@ -1,0 +1,6 @@
+sound = Instance.new("Sound", game.Workspace)
+sound.SoundId = "rbxassetid://146563959"
+sound.Volume = 1
+sound.PlaybackSpeed = 1
+sound.Looped = false
+sound:Play()
