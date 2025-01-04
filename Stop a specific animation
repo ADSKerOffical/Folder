@@ -1,0 +1,5 @@
+for i, animation in ipairs(game.Players.LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+    if animation.Animation.Name ~= "Testor" then
+        animation:Stop()
+    end
+end
