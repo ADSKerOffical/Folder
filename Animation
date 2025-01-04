@@ -1,0 +1,5 @@
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://27432691"
+local k = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(1)
