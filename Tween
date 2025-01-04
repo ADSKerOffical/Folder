@@ -1,0 +1,4 @@
+local partTweenn2 = game:GetService("TweenService"):Create(instance, TweenInfo.new(0.7, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out, 0, false, 0), {
+        
+    })
+    partTweenn2:Play()
