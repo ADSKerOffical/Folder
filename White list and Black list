@@ -1,0 +1,11 @@
+local blacklist = {123456789, 235785489}
+if table.find(blacklist, game.Players.LocalPlayer.CharacterAppearanceId) then
+  print("You in blacklist")
+end
+
+-- example excluding player in white / black list
+ for _, player in ipairs(game.Players:GetPlayers()) do
+  if not table.find(blacklist, game.Players.LocalPlayer.UserId) then
+player:Destroy()
+  end
+ end
