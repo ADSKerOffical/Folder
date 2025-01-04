@@ -1,0 +1,17 @@
+local closestDistance = math.huge
+local closestHumanoid = nil
+local Usuario = game.Players.LocalPlayer
+
+  for _, v in pairs(workspace:GetDescendants()) do
+    if v:IsA("Humanoid") and v.RootPart and v.RootPart.Parent ~= Usuario.Character then
+      local distance = (v.RootPart.Position - Usuario.Character.HumanoidRootPart.Position).magnitude
+        if distance < closestDistance and distance <= 45 then
+             closestDistance = distance
+             closestHumanoid = v
+        end
+     end
+  end
+
+if closestHumanoid and closestHumanoid.Health > 0 then
+                       
+end
