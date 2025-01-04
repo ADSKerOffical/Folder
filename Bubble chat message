@@ -1,0 +1,1 @@
+game.Chat:Chat(part, "message", Enum.ChatColor.White)
