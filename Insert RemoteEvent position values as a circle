@@ -1,0 +1,17 @@
+local radius = 10
+    local num = 8
+
+    for i = 1, num do
+        local angle = (i - 1) * 2 * math.pi / num
+        local x = centerPosition.X + radius * math.cos(angle)
+        local y = centerPosition.Y
+        local z = centerPosition.Z + radius * math.sin(angle)
+
+        local args = {
+            [1] = Vector3.new(x, y, z)
+        }
+
+        game:GetService("Players").LocalPlayer.Character:FindFirstChild("Wise Mystical Tree").Create:FireServer(unpack(args))
+    end
+-- centerPosition - object position
+-- radius - circle size
