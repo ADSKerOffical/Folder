@@ -1,4 +1,4 @@
-local plr = "nil"
+local playerName = "nil"
 for _, player in ipairs(game.Players:GetPlayers()) do
   if string.find(player.Name:lower(), playerName:lower()) then
    local plr = player
