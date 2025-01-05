@@ -1,0 +1,25 @@
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+local originalOffset = humanoid.CameraOffset
+
+local startShakeIntensity = 10
+local shakeSpeed = 0.01
+local shakeDuration = 35
+
+for i = 1, shakeDuration do
+ task.wait()
+ local shakeIntensity = startShakeIntensity * (1 - (i-1)/shakeDuration)
+    local shakeOffset = Vector3.new(
+     math.random(-shakeIntensity, shakeIntensity) / 10,
+        math.random(-shakeIntensity, shakeIntensity) / 10,
+        math.random(-shakeIntensity, shakeIntensity) / 10
+ )
+ local originalOffset = humanoid.CameraOffset
+ local currentTime = 0
+ local duration = shakeSpeed
+ while currentTime < duration do
+     local delta = currentTime/duration
+     humanoid.CameraOffset = originalOffset + shakeOffset * (1 - delta)
+     currentTime = currentTime + task.wait(0.025)
+ end
+ humanoid.CameraOffset = Vector3.new(0, 0, 0)
+end
