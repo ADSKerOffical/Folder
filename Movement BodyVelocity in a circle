@@ -1,0 +1,6 @@
+for i = 1, 16 do
+bodyVel.Velocity = Vector3.new(200 * math.cos(math.rad(22.5 * i)), 0, 200 * math.sin(math.rad(22.5 * i)))
+end
+
+-- 200 - speed of movement
+-- 22,5 * i - angle of movement
