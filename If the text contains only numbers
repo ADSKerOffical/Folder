@@ -1,0 +1,5 @@
+if string.find(str, "%D") == nil then
+print("The text contains only numbers")
+ else 
+print("In the text contains more than just numbers")
+end
