@@ -1,0 +1,14 @@
+local tool = Instance.new("Tool")
+tool.Name = ""
+tool.RequiresHandle = false
+
+local lastPressTime = 0
+tool.Activated:Connect(function()
+  local currentTime = tick()
+            if currentTime - lastPressTime >= 2 then
+                lastPressTime = currentTime 
+                
+            end
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
