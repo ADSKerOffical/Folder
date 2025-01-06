@@ -1,0 +1,2 @@
+local bla = Instance.new("ColorCorrectionEffect", game.Lighting)
+bla.Saturation = -1
