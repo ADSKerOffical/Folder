@@ -1,0 +1,5 @@
+for _, side in ipairs(Enum.NormalId:GetEnumItems()) do
+  texture = Instance.new("Texture", part)
+  texture.Texture = "rbxassetid://" .. tostring(id)
+  texture.Face = side
+end
