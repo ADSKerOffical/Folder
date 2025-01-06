@@ -1,0 +1,19 @@
+local StarterGui = game:GetService("StarterGui") -- not sure why you used CoreGui
+local bindable = Instance.new("BindableFunction")
+
+function bindable.OnInvoke(response)
+    print(response .. " chosen")
+     if response then
+setclipboard(tostring(response))
+     end
+end
+
+StarterGui:SetCore("SendNotification", {
+	Title = "Notification",
+	Text = "Copy script",
+	Duration = 5,
+	Icon = "rbxassetid://0",
+	Callback = bindable,
+	Button1 = "Yes",
+	Button2 = "No"
+})
