@@ -1,0 +1,20 @@
+msg = Instance.new("Hint", workspace)
+msgText = "This text appears gradually at a speed of 0.05"
+waitTime = 0.05 -- 20
+game.Debris:AddItem(msg, 4)
+
+letters = {}
+for i = 1, #msgText do
+    table.insert(letters, msgText:sub(i, i))
+end
+
+for i, letter in ipairs(letters) do
+    msg.Text = msg.Text .. letter
+sound = Instance.new("Sound", game.Workspace) -- dialogue sound
+sound.SoundId = "rbxassetid://358280695"
+sound.Volume = 1
+sound.PlaybackSpeed = 1
+sound.Looped = false
+sound:Play()
+    task.wait(waitTime)
+end
