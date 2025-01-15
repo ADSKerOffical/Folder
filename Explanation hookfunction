@@ -1,1 +1,6 @@
+hookfunction – function that intercepts a function and replaces it with a new one ( hookfunction(old, new) )
+A simple example:
 
+hookfunction(print, warn)
+
+This script intercepts the print function and replaces it with warn
