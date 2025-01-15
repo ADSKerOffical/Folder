@@ -4,3 +4,10 @@ A simple example:
 hookfunction(print, warn)
 
 This script intercepts the print function and replaces it with warn
+Here is a second example that intercepts the print function:
+
+hookfunction(print, function(war)
+  warn("Sms: " .. war)
+end)
+
+For reference: hookfunction completely replaces the function with a new one
