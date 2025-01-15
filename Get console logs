@@ -1,0 +1,18 @@
+for i, v in game:GetService("LogService"):GetLogHistory() do 
+  print(v["message"])
+end
+
+-- only special ones:
+
+for i, v in game:GetService("LogService"):GetLogHistory() do 
+ if v["messageType"] == Enum.MessageType.MessageWarning then
+  print(v["message"])
+ end
+end
+
+-- Types:
+
+Enum.MessageType.MessageError,
+Enum.MessageType.MessageOutput,
+Enum.MessageType.MessageWarning,
+Enum.MessageType.MessageInfo
