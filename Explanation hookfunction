@@ -11,3 +11,31 @@ hookfunction(print, function(war)
 end)
 
 For reference: hookfunction completely replaces the function with a new one
+
+There is also a hook for hooks newcclosure
+But what does it do?
+newcclosure – creates a function that is less noticeable to anti-cheats
+
+Examples:
+
+old = hookfunction(wait, newcclosure(function(...)
+   return old()
+end))
+
+There are also newlclosure
+
+newcclosure makes the function less noticeable to anti-cheats, and newlclosure makes it so that the function cannot be changed, but is vulnerable to anti-cheats
+
+Example:
+
+local myVar = 10
+local myLClosure = newlclosure(function()
+  print("My var: " .. myVar)
+end)
+
+myVar = 20
+myLClosure() -- Output: My var: 10
+
+If you want to know if they have newcclosure or newlclosure then using it:
+
+iscclosure(variable), islclosure(variable)
