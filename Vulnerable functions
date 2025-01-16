@@ -1,0 +1,9 @@
+game:OpenScreenshotsFolder()
+
+game:GetService("GuiService"):OpenBrowserWindow("")
+
+game:GetService("MarketplaceService"):PerformPurchase()
+
+game:GetService("HttpService"):RequestInternal{Url = "https://www.google.com/"}
+
+game:GetService("CoreGui"):TakeScreenshot()
