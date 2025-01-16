@@ -1,0 +1,6 @@
+local ted = true
+part.Touched:Connect(function(hit)
+ if ted == false then return end
+ ted = false
+   -- your script
+end)
