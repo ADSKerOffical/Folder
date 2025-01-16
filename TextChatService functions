@@ -1,0 +1,21 @@
+## find out the chat version:
+
+print(game:GetService("TextChatService").ChatVersion)
+
+LegacyChatService – Old chat
+TextChatService – New chat
+
+## send system message:
+
+game.TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage("Message")
+-- with color:
+game.TextChatService.TextChannels.RBXSystem:DisplaySystemMessage("<font color=\"rgb(255, 0, 0)\">Hello world!</font> ")
+-- with color and font:
+game.TextChatService.TextChannels.RBXSystem:DisplaySystemMessage("<font  face="Michroma" color=\"rgb(255, 0, 0)\">Hello world!</font> ")
+
+## new player.Chatted:
+
+game:GetService("TextChatService").SendingMessage:Connect(function(textChatMessage)
+ print("Channel: "..textChatMessage.TextChannel.Name)
+ print("Text: "..textChatMessage.Text)
+end)
