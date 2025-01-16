@@ -1,0 +1,1 @@
+blackhole.CFrame = blackhole.CFrame:lerp(Position, 0.1) -- 10%
