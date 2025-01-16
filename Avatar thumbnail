@@ -1,0 +1,11 @@
+Head shot:
+
+"https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=48&height=48&format=png"
+
+Avatar:
+
+"https://www.roblox.com/avatar-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=48&height=48&format=png"
+
+Place:
+
+"https://www.roblox.com/asset-thumbnail/image?assetId=".. game.PlaceId .."&width=768&height=432&format=png" -- Thanks to this you can choose any image decal from roblox
